@@ -11,6 +11,7 @@ import speak from "../assets/portfolio/Type-N-Speak.png"
 import BookList from "../assets/portfolio/BookList.png"
 import weight from "../assets/portfolio/weight.png"
 import relaxer from "../assets/portfolio/Relaxer.png"
+import currencyConverter from "../assets/portfolio/CurrencyConverter.png"
 
 const Portfolio = () => {
   const portfolios = [
@@ -28,24 +29,30 @@ const Portfolio = () => {
     },
     {
       id: 3,
+      src: CurrencyConverter,
+      link: 'https://currency-converter-blue-xi-97.vercel.app/',
+      repo: 'https://github.com/prasadkhotkar/currencyConverter'
+    },
+    {
+      id: 4,
       src: notes,
       link: 'https://prasadkhotkar.github.io/React-NoteBookApp/',
       repo: 'https://github.com/prasadkhotkar/React-NoteBookApp'
     },
     {
-      id: 4,
+      id: 5,
       src: BookList,
       link: 'https://prasadkhotkar.github.io/BookList-App/',
       repo: 'https://github.com/prasadkhotkar/BookList-App'
     },
     {
-      id: 5,
+      id: 6,
       src: weight,
       link: 'https://prasadkhotkar.github.io/Weight-Converter/',
       repo: 'https://github.com/prasadkhotkar/Weight-Converter'
     },
     {
-      id: 6,
+      id:7,
       src: relaxer,
       link: 'https://prasadkhotkar.github.io/Relaxer/',
       repo: 'https://github.com/prasadkhotkar/Relaxer'

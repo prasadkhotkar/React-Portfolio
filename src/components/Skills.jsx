@@ -13,6 +13,8 @@ import express from "../assets/express.png"
 import mongodb from "../assets/mongodb.png"
 import redux from "../assets/redux.png"
 import java from  "../assets/java.png"
+import postgres from "../assets/postgres.png"
+
 const Skills = () => {
   const techs = [
     {
@@ -55,37 +57,43 @@ const Skills = () => {
     
     
     {
-      id: 10,
+      id: 6,
       src: express,
       title: "Express",
       style: "shadow-white",
     },
     {
-      id: 11,
+      id: 7,
       src: mongodb,
       title: "MongoDB",
       style: "shadow-green-500",
     },
     {
-      id: 12,
+      id: 8,
+      src: postgres,
+      title: "Postgres",
+      style: "shadow-green-500",
+    },
+    {
+      id: 9,
       src: redux,
       title: "Redux",
       style: "shadow-purple-500",
     },
     {
-      id: 9,
+      id: 10,
       src: tailwind,
       title: "Tailwind",
       style: "shadow-sky-400",
     },
     {
-      id: 6,
+      id: 11,
       src: java,
       title: "JAVA",
       style: "shadow-white",
     },
     {
-      id: 8,
+      id: 12,
       src: github,
       title: "GitHub",
       style: "shadow-gray-400",

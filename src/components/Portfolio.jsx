@@ -11,7 +11,7 @@ import speak from "../assets/portfolio/Type-N-Speak.png"
 import BookList from "../assets/portfolio/BookList.png"
 import weight from "../assets/portfolio/weight.png"
 import relaxer from "../assets/portfolio/Relaxer.png"
-import currencyConverter from "../assets/portfolio/CurrencyConverter.png"
+import CurrencyConverter from "../assets/portfolio/CurrencyConverter.png"
 
 const Portfolio = () => {
   const portfolios = [

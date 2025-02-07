@@ -6,40 +6,30 @@ const NavBar = () => {
   const [nav, setNav] = useState(false);
 
   const links = [
-    {
-      id: 1,
-      link: "home",
-    },
-    {
-      id: 2,
-      link: "about",
-    },
-    {
-      id: 3,
-      link: "portfolio",
-    },
-    {
-      id: 4,
-      link: "Skills",
-    },
-    {
-      id: 5,
-      link: "contact",
-    },
+    { id: 1, link: "home" },
+    { id: 2, link: "about" },
+    { id: 3, link: "portfolio" },
+    { id: 4, link: "skills" },
+    { id: 5, link: "contact" },
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed nav">
+    <nav className="fixed top-0 left-0 w-full h-20 px-6 md:px-12 flex justify-between items-center bg-black text-white shadow-lg z-50">
+      {/* Logo */}
       <div>
-        {/* <h1 className="text-5xl font-signature ml-2"><a className="link-underline hover:transition ease-in-out delay-150 hover:underline hover:decoration-solid" href="https://rahulkarda.netlify.app">Rahul</a></h1> */}
-        <h1 className="text-5xl font-signature ml-2"><a className="link-underline link-underline-black" href="/" target="_blank" rel="noreferrer">Prasad</a></h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-cyan-400">
+          <a href="/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors duration-300">
+            Prasad
+          </a>
+        </h1>
       </div>
 
-      <ul className="hidden md:flex">
+      {/* Desktop Navigation */}
+      <ul className="hidden md:flex space-x-8">
         {links.map(({ id, link }) => (
           <li
             key={id}
-            className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-white duration-200 link-underline"
+            className="text-lg capitalize font-medium text-gray-400 hover:text-white transition-all duration-200 cursor-pointer"
           >
             <Link to={link} smooth duration={500}>
               {link}
@@ -48,25 +38,25 @@ const NavBar = () => {
         ))}
       </ul>
 
+      {/* Mobile Menu Toggle */}
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
+        className="cursor-pointer text-gray-400 md:hidden"
       >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+        {nav ? <FaTimes size={28} /> : <FaBars size={28} />}
       </div>
 
+      {/* Mobile Menu */}
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-400 space-y-6 text-3xl">
           {links.map(({ id, link }) => (
-            <li
-              key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-4xl"
-            >
+            <li key={id}>
               <Link
-                onClick={() => setNav(!nav)}
+                onClick={() => setNav(false)}
                 to={link}
                 smooth
                 duration={500}
+                className="hover:text-white transition-all duration-200 cursor-pointer"
               >
                 {link}
               </Link>
@@ -74,7 +64,7 @@ const NavBar = () => {
           ))}
         </ul>
       )}
-    </div>
+    </nav>
   );
 };
 

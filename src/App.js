@@ -9,7 +9,7 @@ import Footer from "./components/Footer"
 
 function App() {
   return (
-    <div>
+    <div className="h-full w-full  ">
       <NavBar />
       <Home />
       <About />

@@ -2,7 +2,8 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import resume from "../assets/prasad_resume.pdf"
+import resume from "../assets/prasad_khotkar_7775842514.pdf";
+
 const SocialLinks = () => {
   const links = [
     {
@@ -61,15 +62,11 @@ const SocialLinks = () => {
         {links.map(({ id, child, href, style, download }) => (
           <li
             key={id}
-            className={
-              "flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500" +
-              " " +
-              style
-            }
+            className={`flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-600 border-l-4 border-transparent hover:border-blue-500 hover:bg-gray-700 ${style}`}
           >
             <a
               href={href}
-              className="flex justify-between items-center w-full text-white"
+              className="flex justify-between items-center w-full text-white text-lg"
               download={download}
               target="_blank"
               rel="noreferrer"
